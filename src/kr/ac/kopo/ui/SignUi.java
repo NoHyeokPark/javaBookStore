@@ -13,6 +13,7 @@ public class SignUi extends BaseUi {
 
 	@Override
 	public void run() throws Exception {
+		clear();
 		if (ms.logcheck()) {
 			System.out.println("회원가입을 시작합니다.");
 			String user_id;

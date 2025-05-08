@@ -9,21 +9,33 @@ public class MainPageUi extends BaseUi {
 	}
 
 	private String menu() {
-		System.out.println("----------------------------");
-		System.out.println("PolyBooks¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù.");
-		System.out.println("----------------------------");
+		clear();
+		System.out.println("------------------------------------------------------------------------------------------------");
+		System.out.println("\r\n"
+				+ "ooooooooo.             oooo                   oooooooooo.                      oooo                 \r\n"
+				+ "`888   `Y88.           `888                   `888'   `Y8b                     `888                 \r\n"
+				+ " 888   .d88'  .ooooo.   888  oooo    ooo       888     888  .ooooo.   .ooooo.   888  oooo   .oooo.o \r\n"
+				+ " 888ooo88P'  d88' `88b  888   `88.  .8'        888oooo888' d88' `88b d88' `88b  888 .8P'   d88(  \"8 \r\n"
+				+ " 888         888   888  888    `88..8'         888    `88b 888   888 888   888  888888.    `\"Y88b.  \r\n"
+				+ " 888         888   888  888     `888'          888    .88P 888   888 888   888  888 `88b.  o.  )88b \r\n"
+				+ "o888o        `Y8bod8P' o888o     .8'          o888bood8P'  `Y8bod8P' `Y8bod8P' o888o o888o 8\"\"888P' \r\n"
+				+ "                             .o..P'                                                                 \r\n"
+				+ "                             `Y8P'                                                                  \r\n"
+				+ "                                                                                                    \r\n"
+				+ "                                                                                ");
+		System.out.println("------------------------------------------------------------------------------------------------");
 		if (ServiceFactory.getMemberInstance().logcheck()) {
-			System.out.println("\t1. ·Î±×ÀÎ");
+			System.out.println("\t1. ë¡œê·¸ì¸");
 		} else {
-			System.out.println("\t1. ·Î±×¾Æ¿ô");
+			System.out.println("\t1. ë¡œê·¸ì•„ì›ƒ");
 		}
-		System.out.println("\t2. È¸¿ø°¡ÀÔ");
-		System.out.println("\t3. Ã¥ °Ë»ö");
-		System.out.println("\t4. Àå¹Ù±¸´Ï");
-		System.out.println("\t5. °í°´¼¾ÅÍ");
-		System.out.println("\t6. ¸¶ÀÌÆäÀÌÁö");
-		System.out.println("\t0. Á¾·á");
-		String type = scanStr("\tÇ×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä : ");
+		System.out.println("\t2. íšŒì›ê°€ì…");
+		System.out.println("\t3. ì±… ê²€ìƒ‰");
+		System.out.println("\t4. ì¥ë°”êµ¬ë‹ˆ");
+		System.out.println("\t5. ê³ ê°ì„¼í„°");
+		System.out.println("\t6. ë§ˆì´í˜ì´ì§€");
+		System.out.println("\t0. ì¢…ë£Œ");
+		String type = scanStr("\tí•­ëª©ì„ ì„ íƒí•˜ì„¸ìš” : ");
 		return type;
 	}
 
@@ -59,7 +71,7 @@ public class MainPageUi extends BaseUi {
 				if (ui != null)
 					ui.run();
 				else {
-					throw new ChoiceOutOfBoundException("\n\t¸Ş´º¹øÈ£°¡ Àß¸ø¼±ÅÃµÇ¾ú½À´Ï´Ù");
+					throw new ChoiceOutOfBoundException("\n\të©”ë‰´ë²ˆí˜¸ê°€ ì˜ëª»ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤");
 				}
 			} catch (ChoiceOutOfBoundException e) {
 				System.out.println(e.getMessage());

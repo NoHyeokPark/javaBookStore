@@ -21,6 +21,7 @@ public class MyPageUi extends BaseUi {
 	}
 
 	private void orderView(List<OrderVO> lst) {
+		clear();
 		System.out.println("==========================================");
 		System.out.println("\t주문/배송 조회");
 		System.out.println("==========================================");
@@ -35,6 +36,7 @@ public class MyPageUi extends BaseUi {
 			}
 		}
 		System.out.println("==========================================");
+		scanStr("");
 	}
 
 	@Override
@@ -46,6 +48,7 @@ public class MyPageUi extends BaseUi {
 
 		while (true) {
 			try {
+				clear();
 				System.out.println("마이페이지입니다.");
 				System.out.println("1. 회원 정보 수정");
 				System.out.println("2. 회원 탈퇴");
@@ -86,6 +89,7 @@ public class MyPageUi extends BaseUi {
 					if (cash >= 0) {
 						cs.charge(cash);
 						ms.upDateUserInfo();
+						scanStr("");
 					} else {
 						System.out.println("부적절한 금액입니다.");
 					}

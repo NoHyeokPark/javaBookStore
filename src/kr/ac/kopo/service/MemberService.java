@@ -12,9 +12,21 @@ public class MemberService {
 	public MemberService() {
 		memberDAO = new MemberDAO();
 	}
-	
+
 	public void upDateUserInfo() {
 		loginUser = memberDAO.getMember(loginUser.getId());
+	}
+
+	public String findPass(String id, String pohn) {
+		MemberVO user = memberDAO.getMember(id);
+		if (user != null) {
+			if (user.getMobile().equals(pohn)) {
+				String newPass = randomNumber();
+				memberDAO.upDateColStr(user.getNo(), newPass, "pass");
+				return "비밀번호가 [" + newPass + "]로 재발급되었습니다";
+			}
+		}
+		return "일치하는 회원이 없습니다";
 	}
 
 	public String randomNumber() {
@@ -25,23 +37,11 @@ public class MemberService {
 		}
 		return sb.toString();
 	}
-	
-	public String findPass(String id, String pohn) {
-		MemberVO user = memberDAO.getMember(id); 
-		if(user != null) {
-			if (user.getMobile().equals(pohn)) {
-				String newPass = randomNumber();
-				memberDAO.upDateColStr(user.getNo(), newPass, "pass");
-				return "비밀번호가 [" + newPass + "]로 재발급되었습니다";
-			}
-		}
-		return "일치하는 회원이 없습니다";
-	}
 
 	public String findID(String name, String mobile) {
 		String id = memberDAO.selectID(name, mobile);
 		if (id != null)
-			return "회원님의 아이디는 "+id.subSequence(0, id.length()-3)+"*** 입니다.";
+			return "회원님의 아이디는 " + id.subSequence(0, id.length() - 3) + "*** 입니다.";
 		else
 			return "일치하는 회원이 없습니다";
 	}
@@ -69,7 +69,7 @@ public class MemberService {
 	public String getName() {
 		return loginUser.getName();
 	}
-	
+
 	public String getId() {
 		return loginUser.getId();
 	}

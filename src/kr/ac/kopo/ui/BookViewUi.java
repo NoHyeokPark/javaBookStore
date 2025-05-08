@@ -22,6 +22,7 @@ public class BookViewUi extends BaseUi {
 
 	@Override
 	public void run() throws Exception {
+		clear();
 		BookVO book = ss.getBook();
 		List<ReviewVO> list = brs.searchBoardTop5(book.getBook_cd());
 		System.out.println("책 정보 표시");

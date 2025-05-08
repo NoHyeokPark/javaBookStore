@@ -13,6 +13,7 @@ public class MemberUpdateUi extends BaseUi {
 	@Override
 	public void run() throws Exception {
 		while (true) {
+			clear();
 			String choice = scanStr("1. 비밀번호 변경 2. 전화번호 수정 3. 이메일 수정 0. 돌아가기");
 			switch (choice) {
 			case "1":

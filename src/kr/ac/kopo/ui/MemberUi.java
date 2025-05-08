@@ -13,6 +13,7 @@ public class MemberUi extends BaseUi {
 
 	@Override
 	public void run() {
+		clear();
 		if (ms.logcheck()) {
 			String choice = scanStr("1. 로그인 2. 아이디 찾기 3. 비밀번호 재발급 0. 돌아가기");
 			switch(choice) {

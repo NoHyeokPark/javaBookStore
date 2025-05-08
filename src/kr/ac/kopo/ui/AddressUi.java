@@ -27,12 +27,13 @@ public class AddressUi extends BaseUi {
 			}
 		}
 		System.out.println("==========================================");	
+		scanStr("");
 	}
 
 	@Override
 	public void run() throws Exception {
 		while (true) {
-
+			clear();
 			System.out.println("1. 배송지 등록");
 			System.out.println("2. 배송지 보기");
 			System.out.println("3. 배송지 삭제");

@@ -10,7 +10,7 @@ import java.util.List;
 import kr.ac.kopo.util.ConnectionFactory;
 import kr.ac.kopo.vo.AddressVO;
 
-public class AddressDAO {
+public class AddressDAO extends BaseDAO{
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;

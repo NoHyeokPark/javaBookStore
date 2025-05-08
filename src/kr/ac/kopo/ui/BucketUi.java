@@ -17,6 +17,7 @@ public class BucketUi extends BaseUi {
 	@Override
 	public void run() throws Exception {
 		while (true) {
+			clear();
 			int sum = 0;
 			lst = bcs.view();
 			System.out.println("==========================================");
@@ -43,6 +44,7 @@ public class BucketUi extends BaseUi {
 						if (ServiceFactory.getOrderInstance().insert(lst)) {
 							bcs.deleteAll();
 							System.out.println("구매가 완료 되었습니다.");
+							scanStr("");
 						}
 					}
 				}

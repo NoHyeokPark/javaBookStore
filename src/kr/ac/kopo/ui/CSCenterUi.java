@@ -15,6 +15,7 @@ public class CSCenterUi extends BaseUi {
 
 	@Override
 	public void run() throws Exception {
+		clear();
 		if (ServiceFactory.getMemberInstance().logcheck()) {
 			System.out.println("로그인 해주세요.");
 			return;
@@ -43,6 +44,7 @@ public class CSCenterUi extends BaseUi {
 		board.setQuestion(content);
 		cs.addCS(board);
 		System.out.println("\n문의글 등록이 완료되었습니다");
+		scanStr("");
 	}
 
 	private void selectAll() {
@@ -95,6 +97,7 @@ public class CSCenterUi extends BaseUi {
 			System.out.println("==========================================");
 			System.out.println("고객님의 문의를 처리중입니다. 조금만 더 기다려주세요.");
 		}
+		scanStr("");
 	}
 
 }

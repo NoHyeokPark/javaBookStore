@@ -2,7 +2,9 @@ package kr.ac.kopo.ui;
 
 import java.util.Scanner;
 
-public abstract class BaseUi implements IBookUi {
+import kr.ac.kopo.util.ClearAble;
+
+public abstract class BaseUi implements IBookUi, ClearAble {
 	private Scanner sc;
 
 	public BaseUi() {
@@ -17,6 +19,14 @@ public abstract class BaseUi implements IBookUi {
 	protected int scanInt(String msg) {
 		System.out.print(msg);
 		return Integer.parseInt(sc.nextLine());
+	}
+	
+	@Override
+	public void clear() {
+		for(int i = 0; i < 50; i++) {
+			System.out.println();
+		}
+		
 	}
 
 }

@@ -17,6 +17,7 @@ public class SearchUi extends BaseUi {
 	public void run() throws Exception {
 		String typeList = null;
 		while (true) {
+			clear();
 			System.out.println("----------------------------");
 			System.out.println("원하는 책을 검색하실 수 있습니다.");
 			if (typeList != null)
@@ -56,6 +57,7 @@ public class SearchUi extends BaseUi {
 			scanStr("");
 		} else {
 			while (true) {
+				clear();
 				System.out.println("번호\t\t제목\t\t장르\t\t작가\t국가\t\t발간일\t가격");
 				System.out
 						.println("-----------------------------------------------------------------------------------");
@@ -79,7 +81,7 @@ public class SearchUi extends BaseUi {
 				case "#9":
 				case "#10":
 					IBookUi ui = new BookViewUi();
-					ss.setBook(lst.get(Integer.parseInt(choice.substring(1)) - 1));
+					ss.setBook(lst.get(Integer.parseInt(choice.substring(1)) - 1 + n));
 					ui.run();
 					break;
 				case "1":
