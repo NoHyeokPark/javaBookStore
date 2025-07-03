@@ -1,3 +1,5 @@
+![BookStore Logo](poly.png)
+
 # 📚 Java 온라인 서점 시스템
 
 > 자바로 구현한 콘솔 기반 온라인 서점 프로젝트
