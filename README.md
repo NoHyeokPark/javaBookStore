@@ -26,12 +26,11 @@
   - 카테고리별 도서 검색
   - 제목, 저자, 키워드 검색
 - **검색 결과 페이징**: 대량의 검색 결과를 페이지별로 분할 표시
-- **도서 상세 정보**: 도서 정보, 가격, 재고 현황 조회
+- **도서 상세 정보**: 도서 정보, 가격 조회
 
 ### 💬 리뷰 시스템
 - **도서 리뷰 작성**: 구매한 도서에 대한 리뷰 등록
 - **평점 시스템**: 5점 만점 평점 등록 및 평균 평점 계산
-- **리뷰 게시판**: 다른 사용자들의 리뷰 조회
 
 ### 🛒 쇼핑 기능
 - **장바구니 담기**: 원하는 도서를 장바구니에 추가
@@ -185,17 +184,6 @@ String url = "jdbc:mysql://localhost:3306/bookstore";
 Connection conn = DriverManager.getConnection(url, "username", "password");
 ```
 
-### 3. 빌드 도구 설정 (Maven)
-```xml
-<dependencies>
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>8.0.33</version>
-    </dependency>
-</dependencies>
-```
-
 ## 📈 향후 개선 계획
 
 - **웹 인터페이스**: JSP/Servlet 또는 Spring Boot 적용
@@ -219,14 +207,14 @@ Connection conn = DriverManager.getConnection(url, "username", "password");
 
 **NoHyeokPark**
 - GitHub: [@NoHyeokPark](https://github.com/NoHyeokPark)
-- Email: your.email@example.com
+- Email: park92y@naver.com
 
 ## 📞 문의사항
 
 프로젝트에 대한 질문이나 제안사항이 있으시면 언제든지 연락주세요!
 
 - GitHub Issues: [이슈 등록](https://github.com/NoHyeokPark/javaBookStore/issues)
-- Email: your.email@example.com
+- Email: park92y@naver.com
 
 ---
 
